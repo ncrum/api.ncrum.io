@@ -1,0 +1,32 @@
+{
+  "name": "api.ncrum.io",
+  "version": "1.0.0",
+  "description": "api for ncrum.io",
+  "main": "server.js",
+  "scripts": {
+    "develop": "sudo nodemon --exec babel-node -- src/server/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com/ncrum/api.ncrum.io"
+  },
+  "keywords": [
+    "api",
+    "ncrum.io"
+  ],
+  "author": "ncrum",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.5.1",
+    "babel-preset-es2015": "^6.5.0",
+    "babel-preset-stage-2": "^6.5.0"
+  },
+  "dependencies": {
+    "koa": "^1.1.2",
+    "koa-bodyparser": "^2.0.1",
+    "koa-err": "^1.0.1",
+    "koa-morgan": "^1.0.1",
+    "koa-router": "^5.4.0",
+    "mongoose": "^4.4.4"
+  }
+}
