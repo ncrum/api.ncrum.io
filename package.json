@@ -8,7 +8,7 @@
     "build": "babel src/server -d build",
     "clean": "rm -rf build && mkdir build",
     "prestart": "npm install --dev && npm run clean && npm run build",
-    "start": "env NODE_ENV=production sudo nodemon build/server.js"
+    "start": "node build/server.js"
   },
   "repository": {
     "type": "git",
