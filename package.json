@@ -7,7 +7,7 @@
     "develop": "sudo nodemon --exec babel-node -- src/server/server.js",
     "build": "babel src/server -d build",
     "clean": "rm -rf build && mkdir build",
-    "prestart": "npm run clean && npm run build",
+    "prestart": "npm install --dev && npm run clean && npm run build",
     "start": "env NODE_ENV=production sudo nodemon build/server.js"
   },
   "repository": {
