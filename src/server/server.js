@@ -1,3 +1,4 @@
+import 'babel-polyfill'
 import path from 'path'
 import koa from 'koa'
 import bodyParser from 'koa-bodyparser'
