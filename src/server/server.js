@@ -3,6 +3,7 @@ import path from 'path'
 import koa from 'koa'
 import bodyParser from 'koa-bodyparser'
 import koaError from 'koa-err'
+import koaCors from 'koa-cors'
 import morgan from 'koa-morgan'
 import routes from './routes'
 
@@ -13,6 +14,7 @@ const app = koa()
 
 app.use(bodyParser())
 app.use(koaError())
+app.use(koaCors())
 app.use(morgan.middleware('dev'))
 
 routes(app)
