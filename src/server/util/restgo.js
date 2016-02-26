@@ -32,6 +32,7 @@ export default function(model, base) {
       let object = new model(body);
       yield persist(object)();
       this.status = 200;
+      this.body = object;
     } catch(err) {
       this.throw(errorMsg(err, 'unable to add new ' + name), 500);
     }
@@ -72,6 +73,7 @@ export default function(model, base) {
       object = Object.assign(object, body);
       yield persist(object)();
       this.status = 200;
+      this.body = object;
     } catch(err) {
       this.throw(errorMsg(err, 'unable to update ' + name + ' with id ' + id), 500);
     }
